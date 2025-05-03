@@ -165,31 +165,33 @@ hr {
 
 @media (min-width: 800px) {
 	.header_pub-info {
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		justify-content: space-between;
 		align-items: center;
+		padding: 0 25px;
 	}
-
 	
+	.pub-info_date {
+		text-align: end;
+	}
 
 	.main-module {
-		display: grid;
-		grid-template-columns: 527px auto;
-		grid-template-rows:  1318px;
-		grid-template-areas: "main-article main-sidebar";
 		padding: 25px;
+	} 
+
+	.container {
+		display: grid;
+		grid-template-columns: 475px auto;
+		grid-template-areas: "main-article main-sidebar";
 		gap: 25px;
 	}
-
-	/* .container {
-		display: grid;
-		justify-items: auto;
-	} */
 
 	.main-article {
 		width: 100%;
 		border-radius: 0.6rem;
 		margin: 0;
+		grid-area: main-article;
 		grid-column: 1 2;
 	}
 
@@ -198,7 +200,5 @@ hr {
 		border-radius: 0.6rem;
 		margin: 0;
 		grid-area: main-sidebar;
-		/* grid-column: -3;
-		grid-row: -3; */
 	}
 }
