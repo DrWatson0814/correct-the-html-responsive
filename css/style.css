@@ -170,15 +170,35 @@ hr {
 		align-items: center;
 	}
 
+	
+
+	.main-module {
+		display: grid;
+		grid-template-columns: 527px auto;
+		grid-template-rows:  1318px;
+		grid-template-areas: "main-article main-sidebar";
+		padding: 25px;
+		gap: 25px;
+	}
+
+	/* .container {
+		display: grid;
+		justify-items: auto;
+	} */
+
 	.main-article {
-		width: 60%;
+		width: 100%;
 		border-radius: 0.6rem;
 		margin: 0;
+		grid-column: 1 2;
 	}
 
 	.main-sidebar {
-		width: 40%;
+		width: 100%;
 		border-radius: 0.6rem;
 		margin: 0;
+		grid-area: main-sidebar;
+		/* grid-column: -3;
+		grid-row: -3; */
 	}
 }
